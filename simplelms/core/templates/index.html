@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>This is the MOCK Project which is provided by Zaki<h1></h1>
+	<h2 style="text-decoration: underline;">category</h2>
+    <ul>
+        {% for category in categories %}
+        <li><a href="{% url 'category' category.id %}">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
